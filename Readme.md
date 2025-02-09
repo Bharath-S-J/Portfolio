@@ -92,12 +92,19 @@ postcss.config.js  # PostCSS configuration
 
 ---
 
-## 📬 Contact
-If you have any questions or want to get in touch, feel free to reach out via:
+## 📞 Contact
 
-🔗 **Portfolio:** [Live Demo](https://your-portfolio-link.vercel.app/)
-🐙 **GitHub:** [Bharath-S-J](https://github.com/Bharath-S-J)
-💼 **LinkedIn:** [Bharath S J](https://www.linkedin.com/in/bharath-s-j-56a734206)
+You can connect with me through the following platforms:
+
+- **GitHub**: [Bharath S J](https://github.com/Bharath-S-J)  
+  Explore my repositories and projects.
+
+- **LinkedIn**: [Bharath S J](https://www.linkedin.com/in/bharath-s-j-56a734206)  
+  Let's connect and discuss potential opportunities.
+
+- **Portfolio**: [Portfolio Website](https://portfolio-bharathsj.vercel.app)  
+  Check out my work and projects.
+
 
 ---
 

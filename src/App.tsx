@@ -295,11 +295,7 @@ function App() {
                 Passionate Software Developer | Problem Solver
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
-                I am a software developer driven by curiosity and a commitment
-                to building intuitive and scalable solutions. With a strong
-                focus on problem-solving and continuous learning, I strive to
-                create impactful, efficient software that enhances user
-                experiences and contributes positively to the tech community.
+              I'm a software developer with a strong focus on building scalable and intuitive solutions. Driven by curiosity and a commitment to problem-solving, I continuously learn and apply new technologies to create efficient software that enhances user experiences.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <button
