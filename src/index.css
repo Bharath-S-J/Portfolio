@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+@layer components {
+  .animated-border-card {
+    @apply relative border-2 border-transparent hover:border-blue-600 hover:animate-border;
+  }
+
+  /* Add a new class for cards that need the animation but with different styling */
+  .animated-border-card-alt {
+    @apply relative border-2 border-transparent hover:border-blue-600/50 hover:animate-border-alt transform hover:scale-[1.02] transition-all duration-300;
+  }
+}
