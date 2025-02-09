@@ -40,9 +40,9 @@ Welcome to my personal portfolio! 🚀 This is a fully responsive, dark-mode-sup
    ```
 3. Create a `.env` file in the root directory and add your Gmail credentials:
    ```sh
-   GMAIL_USER_F=your-email@gmail.com
+   GMAIL_USER_F=your-email@gmail.com //from email address
    GMAIL_APP_PASSWORD=your-app-password
-   GMAIL_USER_T=your-email@gmail.com
+   GMAIL_USER_T=your-email@gmail.com //to email address
    ```
 
 ---
@@ -69,7 +69,7 @@ Welcome to my personal portfolio! 🚀 This is a fully responsive, dark-mode-sup
 ```
 .vite/
 api/
-  ├── contact.ts  # Handles contact form submission using Nodemailer
+  ├── contact.mjs  # Handles contact form submission using Nodemailer
 src/
   ├── components/
   │   ├── ContactForm.tsx  # Contact form component
