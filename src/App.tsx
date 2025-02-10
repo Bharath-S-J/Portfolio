@@ -670,7 +670,7 @@ function App() {
                 <Github size={24} />
               </a>
               <a
-                href="https://www.linkedin.com/in/bharath-s-j-56a734206"
+                href="https://www.linkedin.com/in/bharathsj"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-400 transition-colors">
