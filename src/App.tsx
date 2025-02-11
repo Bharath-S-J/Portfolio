@@ -24,7 +24,8 @@ const projects = [
     description:
       "A modern React-based Todo application with Firebase authentication, designed for efficient task management while ensuring secure login, real-time synchronization, and password recovery.",
     technologies: [
-      "React","Tailwind CSS",
+      "React",
+      "Tailwind CSS",
       "Vite",
       "ESLint",
       "Git",
@@ -33,7 +34,7 @@ const projects = [
       "React Router DOM",
     ],
     imageUrl:
-    "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/thumbnail.jpg",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/thumbnail.jpg",
     githubUrl: "https://github.com/Bharath-S-J/Task-Master",
     demoUrl: "https://task-master-jade-beta.vercel.app/",
     features: [
@@ -45,7 +46,7 @@ const projects = [
       "🚀 Performance - Fast loading with Vite and optimized rendering",
       "🎨 Minimal UI - Responsive design with a user-friendly interface",
       "🔒 Protected Routes - Ensures only authenticated users can access certain pages.",
-      "⚡ Error Handling & Validation - Comprehensive input validation and real-time error messaging."
+      "⚡ Error Handling & Validation - Comprehensive input validation and real-time error messaging.",
     ],
     challenges:
       "Ensuring real-time synchronization, secure authentication, and optimized performance was achieved by leveraging Firebase Firestore for instant updates, implementing authentication with Google and email verification, and using Vite for fast and efficient development.",
@@ -63,7 +64,15 @@ const projects = [
     title: "Total Bank Manager",
     description:
       "A robust banking management system built using Java (Swing) and MySQL, designed to streamline banking operations with a three-tier user access model. Customers can register, manage accounts, and perform transactions, while employees handle verifications and customer support. Managers oversee bank operations, track financial trends, and manage employees. The system integrates email verification, graphical analytics, and automated account handling for a fully digital banking experience.",
-    technologies: ["Java (Swing)", "MySQL", "JDBC", "JFreeChart", "JavaMail API","iTextPDF","Apache NetBeans"],
+    technologies: [
+      "Java (Swing)",
+      "MySQL",
+      "JDBC",
+      "JFreeChart",
+      "JavaMail API",
+      "iTextPDF",
+      "Apache NetBeans",
+    ],
     imageUrl:
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TotalBankManagerImages/thumbnail.jpg",
     githubUrl: "https://github.com/Bharath-S-J/Total-Bank-Manager",
@@ -75,7 +84,7 @@ const projects = [
       "🔢 Automated Account Handling - Auto-generated account numbers upon approval",
       "📊 Graphical Statistics - Visual representation of financial trends and complaint resolution",
       "🔐 Secure Authentication - Email verification and password protection",
-      "📄 Transaction History & PDF Export - Users can download transaction records"
+      "📄 Transaction History & PDF Export - Users can download transaction records",
     ],
     challenges:
       "Developed reliable communication protocols between embedded devices and server. Implemented real-time data processing and device state management.",
@@ -103,29 +112,29 @@ const projects = [
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TotalBankManagerImages/BarGraphView.png",
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TotalBankManagerImages/LineGraphView.png",
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TotalBankManagerImages/PasswordReset.png",
-      
     ],
   },
   {
     id: 3,
     title: "Finance Flow",
-    description: "A comprehensive desktop application designed for managing loan applications, processing, and tracking. Built with Python and MySQL, it automates financial workflows, ensuring secure document storage, EMI tracking, and role-based access for users and admins.",
+    description:
+      "A comprehensive desktop application designed for managing loan applications, processing, and tracking. Built with Python and MySQL, it automates financial workflows, ensuring secure document storage, EMI tracking, and role-based access for users and admins.",
     technologies: ["Python (Tkinter)", "MySQL", "PIL ", "Pandas"],
     imageUrl:
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/FinanceFlowImages/thumbnail.jpg",
     githubUrl: "https://github.com/Bharath-S-J/Finance-Flow",
-    
+
     features: [
       "🔐 User Management - Secure login, role-based access, document uploads",
       "🏦 Loan Processing - Multiple loan schemes, document verification, EMI calculations, penalty management",
       "📂 Document Handling - Secure storage, preview functionality, binary data conversion",
       "📊 Financial Management - Payment tracking, interest management, outstanding balance calculation",
-      "🔒 Security - Password protection, encrypted document storage"
+      "🔒 Security - Password protection, encrypted document storage",
     ],
     challenges:
       "Handling large-scale financial transactions, securing sensitive user data, and automating EMI tracking were addressed using MySQL for structured data storage, role-based access control for security, and automated calculations to minimize human errors.",
     gallery: [
-     "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/FinanceFlowImages/RegisterPage.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/FinanceFlowImages/RegisterPage.png",
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/FinanceFlowImages/SignPage.png",
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/FinanceFlowImages/UserDashboard.png",
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/FinanceFlowImages/UserDetailsFill.png",
@@ -149,16 +158,21 @@ const projects = [
     title: "Digital Due Records",
     description:
       "A C-based digital ledger system designed to replace traditional 'Katha' books used in Indian stores. This project streamlines customer due management, bill generation, and record-keeping while ensuring secure authentication and efficient store management.",
-    technologies: ["C", "Linked Lists", "File Handling", "Dynamic Memory Allocation"],
+    technologies: [
+      "C",
+      "Linked Lists",
+      "File Handling",
+      "Dynamic Memory Allocation",
+    ],
     imageUrl:
-    "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/DigitalDueRecordsImages/thumbnail.jpg",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/DigitalDueRecordsImages/thumbnail.jpg",
     githubUrl: "https://github.com/Bharath-S-J/Digital-Due-Records",
     features: [
       "🔐 Dual Access System - Separate portals for customers (view dues) and admins",
       "📂 Customer Record Management - Add, update, and delete records, automatic due calculations, real-time bill generation.",
       "🔍 Advanced Search & Sorting - Search by name or transaction date; sort by name, due amount, or date using linked lists.",
       "🛡️ Security & Authentication - Password-protected admin access, security questions for recovery, limited login attempts",
-      "🏪 Store Management - Customizable store details, professional bill generation, user-friendly interface requiring no technical knowledge"
+      "🏪 Store Management - Customizable store details, professional bill generation, user-friendly interface requiring no technical knowledge",
     ],
     challenges:
       "Managing dynamic customer records, ensuring security, and automating bill generation were achieved by using linked lists for efficient sorting, integrating password protection and security questions for safety, and automating real-time due calculations for seamless bill generation.",
@@ -191,10 +205,11 @@ const projects = [
   {
     id: 5,
     title: "Virtual Agri-Marketplace",
-    description: "A web-based platform that connects farmers and buyers, enabling direct agricultural product trading while eliminating intermediaries. The platform ensures fair pricing, inventory management, and order tracking for both farmers and buyers.",
-    technologies: ["PHP", "MySQL", "HTML ", "CSS","JavaScript","Bootstrap"],
+    description:
+      "A web-based platform that connects farmers and buyers, enabling direct agricultural product trading while eliminating intermediaries. The platform ensures fair pricing, inventory management, and order tracking for both farmers and buyers.",
+    technologies: ["PHP", "MySQL", "HTML ", "CSS", "JavaScript", "Bootstrap"],
     imageUrl:
-    "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/thumbnail.jpg",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/thumbnail.jpg",
     githubUrl: "https://github.com/Bharath-S-J/Virtual-Agri-Marketplace",
 
     features: [
@@ -202,7 +217,7 @@ const projects = [
       "🌾 Farmer Features - Product listing, inventory management, sales tracking",
       "🛒 Buyer Features - Product browsing, cart management, order processing",
       "📦 Order & Inventory Management - Automated stock validation, secure order tracking",
-      "🛡️ Security - Password hashing, SQL injection prevention, session management"
+      "🛡️ Security - Password hashing, SQL injection prevention, session management",
     ],
     challenges:
       "Ensuring real-time inventory updates and secure user authentication was addressed by implementing automated stock validation, password hashing for credentials, and session-based authentication to enhance security and prevent unauthorized access.",
@@ -220,8 +235,6 @@ const projects = [
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/BuyerCartView.png",
 
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/BuyerOrderViews.png",
-
-      
     ],
   },
   {
@@ -231,7 +244,7 @@ const projects = [
       "An intuitive Android application designed to help users efficiently manage their medication schedule by setting flexible reminders and keeping personalized notes for each medicine.",
     technologies: ["Android", "Java", "Android Studio", "SQLite"],
     imageUrl:
-    "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/MyTherapyImages/thumbnail.jpg",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/MyTherapyImages/thumbnail.jpg",
     githubUrl: "https://github.com/Bharath-S-J/My-Therapy",
     features: [
       "💊 Medication Management - Add medicines with custom names and descriptions",
@@ -241,7 +254,6 @@ const projects = [
     ],
     challenges:
       "Implementing an efficient scheduling system for diverse reminder types was solved by utilizing Android’s Alarm Manager and WorkManager, ensuring timely and reliable notifications without excessive battery usage.",
- 
   },
 ];
 
@@ -295,7 +307,11 @@ function App() {
                 Passionate Software Developer | Problem Solver
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
-              I'm a software developer with a strong focus on building scalable and intuitive solutions. Driven by curiosity and a commitment to problem-solving, I continuously learn and apply new technologies to create efficient software that enhances user experiences.
+                I'm a software developer with a strong focus on building
+                scalable and intuitive solutions. Driven by curiosity and a
+                commitment to problem-solving, I continuously learn and apply
+                new technologies to create efficient software that enhances user
+                experiences.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <button
@@ -397,7 +413,7 @@ function App() {
                       Tech Stack
                     </h4>
                     <p className="text-gray-600 dark:text-gray-300 mb-2">
-                      HTML, CSS, React, Python, MongoDB
+                      HTML, CSS, JS, Reactjs, Python, MongoDB, Django
                     </p>
                   </div>
 
@@ -536,10 +552,18 @@ function App() {
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
               <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                Databases
+                Databases & DevOps
               </h3>
               <div className="flex flex-wrap gap-2">
-                {["MySQL", "PostgreSQL", "MongoDB", "Firebase"].map((skill) => (
+                {[
+                  "MySQL",
+                  "PostgreSQL",
+                  "MongoDB",
+                  "Firebase",
+                  "Docker",
+                  "Git",
+                  "GitHub",
+                ].map((skill) => (
                   <span
                     key={skill}
                     className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm">
@@ -548,12 +572,22 @@ function App() {
                 ))}
               </div>
             </div>
+
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
               <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                DevOps & Cloud
+              Computer Science Fundamentals
               </h3>
               <div className="flex flex-wrap gap-2">
-                {["Docker", "Kubernetes", "CI/CD", "GitHub"].map((skill) => (
+                {[
+                  "DSA",
+                  "OOP",
+                  "System Design",
+                  "DBMS",
+                  "OS",
+                  "CN",
+                  "RESTful APIs",
+                  "Linux",
+                ].map((skill) => (
                   <span
                     key={skill}
                     className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-sm">
@@ -562,15 +596,14 @@ function App() {
                 ))}
               </div>
             </div>
+
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
               <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
                 Professional Experience
               </h3>
               <div className="text-gray-600 dark:text-gray-300">
                 <p className="mb-2">• 1 Internship (Software Development)</p>
-                <p>
-                  • 6+ projects 
-                </p>
+                <p>• 6+ projects</p>
                 <p>• Hosted projects with live demonstrations</p>
                 <p>
                   • Strong foundation in backend, databases, and cloud
@@ -650,8 +683,8 @@ function App() {
               Get in Touch
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Have an idea, a project, or just want to connect? Feel free to reach out. always open to 
-            discussions and collaborations!
+              Have an idea, a project, or just want to connect? Feel free to
+              reach out. always open to discussions and collaborations!
             </p>
           </div>
           <ContactForm />
@@ -670,7 +703,7 @@ function App() {
                 <Github size={24} />
               </a>
               <a
-                href="https://www.linkedin.com/in/bharathsj"
+                href="https://www.linkedin.com/in/bharathsj/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-400 transition-colors">
