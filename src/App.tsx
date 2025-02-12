@@ -326,6 +326,13 @@ function App() {
                   View Projects
                   <ChevronDown size={18} className="sm:w-5 sm:h-5" />
                 </button>
+                
+              </div>
+              <h5 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 mt-8">
+              Project cards are expandable for detailed insights and demo previews. 
+              </h5>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              
               </div>
             </div>
             <div className="order-1 md:order-2 px-4 sm:px-0">
@@ -469,6 +476,7 @@ function App() {
                 </div>
               </div>
             </div> */}
+
           </div>
 
           <div className="mt-8 flex justify-center">
