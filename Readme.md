@@ -62,6 +62,10 @@ Welcome to my personal portfolio! 🚀 This is a fully responsive, dark-mode-sup
    ```sh
    npm run preview
    ```
+5. For contact form api (create a project in vercel):
+   ```sh
+   vercel dev
+   ```
 
 ---
 
