@@ -508,6 +508,7 @@ function App() {
                 {[
                   "C",
                   "C++",
+                  "C#",
                   "Java",
                   "Python",
                   "PHP",
@@ -549,7 +550,7 @@ function App() {
                 Backend Development
               </h3>
               <div className="flex flex-wrap gap-2">
-                {["Node.js", "Express.js", "Embedded.js"].map((skill) => (
+                {["Node.js", "Express.js", "Embedded.js","Spring Boot"].map((skill) => (
                   <span
                     key={skill}
                     className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">
@@ -595,6 +596,8 @@ function App() {
                   "CN",
                   "RESTful APIs",
                   "Linux",
+                  "SDLC",
+                  "SD"
                 ].map((skill) => (
                   <span
                     key={skill}
