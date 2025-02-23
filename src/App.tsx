@@ -304,14 +304,10 @@ function App() {
                 Bharath S J
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-6">
-                Passionate Software Developer | Problem Solver
+                Passionate Software Engineer | Problem Solver
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
-                I'm a software developer with a strong focus on building
-                scalable and intuitive solutions. Driven by curiosity and a
-                commitment to problem-solving, I continuously learn and apply
-                new technologies to create efficient software that enhances user
-                experiences.
+              I'm a Software Engineer passionate about building scalable, efficient, and user-centric solutions. Driven by curiosity and a problem-solving mindset, I continuously explore and apply new technologies to develop intuitive software that enhances user experiences and system performance.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <button
