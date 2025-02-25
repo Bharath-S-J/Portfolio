@@ -212,7 +212,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             {project.gallery && project.gallery.length > 0 && (
               <button
                 onClick={() => setShowGallery(true)}
-                className="absolute bottom-4 right-4 flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-black/50 text-white rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                className="absolute bottom-4 right-4 flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-black/50 text-white rounded-lg opacity-100 group-hover:opacity-100 transition-opacity"
               >
                 <ImageIcon size={18} />
                 <span className="text-sm sm:text-base">View Gallery</span>
