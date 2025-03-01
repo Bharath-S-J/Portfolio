@@ -58,9 +58,50 @@ const projects = [
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/ResetPassword.png",
     ],
   },
-
   {
     id: 2,
+    title: "Spring Boot Microservices",
+    description: "A full-fledged microservices architecture using Spring Boot, designed to provide a scalable and efficient backend system with an API Gateway, authentication via Keycloak, real-time monitoring with Grafana, and asynchronous messaging using Kafka.",
+    technologies: [
+      "Spring Boot",
+      "Spring Cloud Gateway",
+      "MySQL",
+      "MongoDB",
+      "Kafka",
+      "Keycloak",
+      "Grafana",
+      "Loki",
+      "Docker",
+    ],
+    imageUrl: "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/SpringBootMicroservicesImages/thumbnail.jpg",
+    githubUrl: "https://github.com/Bharath-S-J/SpringBootMicroservice",
+    features: [
+      "🚀 Microservices Architecture - Independent services for Product, Order, Inventory, and Notification.",
+      "🔐 Authentication & Authorization - Secured using Keycloak for role-based access control.",
+      "📡 API Gateway - Centralized routing and security via Spring Cloud Gateway.",
+      "🔄 Asynchronous Messaging - Kafka integration for event-driven communication.",
+      "📊 Real-time Monitoring - Grafana, Prometheus, and Loki for performance and logs tracking.",
+      "⚡ Performance Optimization - Efficient service-to-service communication with resilience."
+    ],
+    challenges: "Building a distributed system required efficient communication between microservices, ensuring security with Keycloak, and setting up real-time monitoring with Grafana and Prometheus. The integration of Kafka improved system resilience and reduced latency in message processing.",
+
+    gallery: [
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/SpringBootMicroservicesImages/HomePage.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/SpringBootMicroservicesImages/Register.png ",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/SpringBootMicroservicesImages/Login.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/SpringBootMicroservicesImages/HomePage_AfterLogin.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/SpringBootMicroservicesImages/AddProduct.png",
+
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/SpringBootMicroservicesImages/ApacheKafkaDashboard.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/SpringBootMicroservicesImages/KeycloakDashboard.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/SpringBootMicroservicesImages/GrafanaDasgboard.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/SpringBootMicroservicesImages/GrafanaLoki.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/SpringBootMicroservicesImages/GrafanaTempo.png",
+    ],
+  },
+
+  {
+    id: 3,
     title: "Total Bank Manager",
     description:
       "A robust banking management system built using Java (Swing) and MySQL, designed to streamline banking operations with a three-tier user access model. Customers can register, manage accounts, and perform transactions, while employees handle verifications and customer support. Managers oversee bank operations, track financial trends, and manage employees. The system integrates email verification, graphical analytics, and automated account handling for a fully digital banking experience.",
@@ -115,7 +156,7 @@ const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Finance Flow",
     description:
       "A comprehensive desktop application designed for managing loan applications, processing, and tracking. Built with Python and MySQL, it automates financial workflows, ensuring secure document storage, EMI tracking, and role-based access for users and admins.",
@@ -154,7 +195,7 @@ const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Digital Due Records",
     description:
       "A C-based digital ledger system designed to replace traditional 'Katha' books used in Indian stores. This project streamlines customer due management, bill generation, and record-keeping while ensuring secure authentication and efficient store management.",
@@ -203,7 +244,7 @@ const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Virtual Agri-Marketplace",
     description:
       "A web-based platform that connects farmers and buyers, enabling direct agricultural product trading while eliminating intermediaries. The platform ensures fair pricing, inventory management, and order tracking for both farmers and buyers.",
@@ -237,24 +278,8 @@ const projects = [
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/BuyerOrderViews.png",
     ],
   },
-  {
-    id: 6,
-    title: "MyTherapy",
-    description:
-      "An intuitive Android application designed to help users efficiently manage their medication schedule by setting flexible reminders and keeping personalized notes for each medicine.",
-    technologies: ["Android", "Java", "Android Studio", "SQLite"],
-    imageUrl:
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/MyTherapyImages/thumbnail.jpg",
-    githubUrl: "https://github.com/Bharath-S-J/My-Therapy",
-    features: [
-      "💊 Medication Management - Add medicines with custom names and descriptions",
-      "⏰ Flexible Reminders - Set daily, multiple times a day, or custom frequency reminders",
-      "📝 Notes Section - Store personalized notes for each medication",
-      "🎨 Minimal UI - Clean and user-friendly interface for seamless navigation",
-    ],
-    challenges:
-      "Implementing an efficient scheduling system for diverse reminder types was solved by utilizing Android’s Alarm Manager and WorkManager, ensuring timely and reliable notifications without excessive battery usage.",
-  },
+ 
+  
 ];
 
 function App() {
@@ -304,10 +329,10 @@ function App() {
                 Bharath S J
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-6">
-                Passionate Software Engineer | Problem Solver
+                Software Engineer | Problem Solver
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
-              I'm a Software Engineer passionate about building scalable, efficient, and user-centric solutions. Driven by curiosity and a problem-solving mindset, I continuously explore and apply new technologies to develop intuitive software that enhances user experiences and system performance.
+              I'm a Software Engineer passionate about building scalable, efficient, and user-centric solutions. With a strong problem-solving mindset and a deep curiosity for technology, I continuously explore and apply new advancements to develop intuitive software that enhances both user experience and system performance.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <button
@@ -593,7 +618,8 @@ function App() {
                   "RESTful APIs",
                   "Linux",
                   "SDLC",
-                  "SD"
+                  "Software Deployment",
+                  "Microservices",
                 ].map((skill) => (
                   <span
                     key={skill}
