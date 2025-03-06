@@ -16,6 +16,7 @@ import { Navbar } from "./components/Navbar";
 import { ProjectCard } from "./components/ProjectCard";
 import { ProjectModal } from "./components/ProjectModal";
 import { ContactForm } from "./components/ContactForm";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -61,7 +62,8 @@ const projects = [
   {
     id: 2,
     title: "Spring Boot Microservices",
-    description: "A full-fledged microservices architecture using Spring Boot, designed to provide a scalable and efficient backend system with an API Gateway, authentication via Keycloak, real-time monitoring with Grafana, and asynchronous messaging using Kafka.",
+    description:
+      "A full-fledged microservices architecture using Spring Boot, designed to provide a scalable and efficient backend system with an API Gateway, authentication via Keycloak, real-time monitoring with Grafana, and asynchronous messaging using Kafka.",
     technologies: [
       "Spring Boot",
       "Spring Cloud Gateway",
@@ -73,7 +75,8 @@ const projects = [
       "Loki",
       "Docker",
     ],
-    imageUrl: "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/SpringBootMicroservicesImages/thumbnail.jpg",
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/SpringBootMicroservicesImages/thumbnail.jpg",
     githubUrl: "https://github.com/Bharath-S-J/SpringBootMicroservice",
     features: [
       "🚀 Microservices Architecture - Independent services for Product, Order, Inventory, and Notification.",
@@ -81,9 +84,10 @@ const projects = [
       "📡 API Gateway - Centralized routing and security via Spring Cloud Gateway.",
       "🔄 Asynchronous Messaging - Kafka integration for event-driven communication.",
       "📊 Real-time Monitoring - Grafana, Prometheus, and Loki for performance and logs tracking.",
-      "⚡ Performance Optimization - Efficient service-to-service communication with resilience."
+      "⚡ Performance Optimization - Efficient service-to-service communication with resilience.",
     ],
-    challenges: "Building a distributed system required efficient communication between microservices, ensuring security with Keycloak, and setting up real-time monitoring with Grafana and Prometheus. The integration of Kafka improved system resilience and reduced latency in message processing.",
+    challenges:
+      "Building a distributed system required efficient communication between microservices, ensuring security with Keycloak, and setting up real-time monitoring with Grafana and Prometheus. The integration of Kafka improved system resilience and reduced latency in message processing.",
 
     gallery: [
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/SpringBootMicroservicesImages/HomePage.png",
@@ -278,8 +282,6 @@ const projects = [
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/BuyerOrderViews.png",
     ],
   },
- 
-  
 ];
 
 function App() {
@@ -326,13 +328,19 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-                Bharath S J
+                Hi, I'm Bharath S J
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-6">
-                Software Engineer | Problem Solver
+                Aspiring Software Engineer | Backend, System Design & Cloud
+                Enthusiast
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
-              I'm a Software Engineer passionate about building scalable, efficient, and user-centric solutions. With a strong problem-solving mindset and a deep curiosity for technology, I continuously explore and apply new advancements to develop intuitive software that enhances both user experience and system performance.
+                Passionate about building scalable, high-performance
+                applications and solving complex technical challenges. With
+                expertise in backend engineering, system design, full-stack
+                development, and cloud computing, I am actively seeking
+                opportunities in Software Development, Backend Engineering,
+                System Design, Full-Stack Development, and DevOps.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <button
@@ -347,20 +355,24 @@ function App() {
                   View Projects
                   <ChevronDown size={18} className="sm:w-5 sm:h-5" />
                 </button>
-                
               </div>
               <h5 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 mt-8">
-              Project cards are expandable for detailed insights and demo previews. 
+                Explore my projects for detailed insights and live demos.
               </h5>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              
-              </div>
             </div>
-            <div className="order-1 md:order-2 px-4 sm:px-0">
-              <img
+
+            {/* Profile Image with Hover Animation */}
+            <div className="order-1 md:order-2 px-4 sm:px-0 flex justify-center">
+              <motion.img
                 src="https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/Other/ProfileImage.png"
                 alt="Profile"
                 className="rounded-2xl shadow-2xl w-full max-w-sm mx-auto"
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 2,
+                  boxShadow: "0px 10px 30px rgba(0, 102, 255, 0.4)",
+                }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
               />
             </div>
           </div>
@@ -418,47 +430,54 @@ function App() {
             </div>
 
             <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl animated-border-card-alt">
-  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-    Internship Experience
-  </h3>
-  <div className="space-y-6">
-    <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-        Software Developer Intern - Wezenite Technologies
-      </h4>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                Internship Experience
+              </h3>
+              <div className="space-y-6">
+                <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    Software Developer Intern - Wezenite Technologies
+                  </h4>
 
-      <div className="p-4 rounded-lg">
-        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-          Duration
-        </h4>
-        <p className="text-gray-600 dark:text-gray-300 mb-2">
-          March 2024 - May 2024
-        </p>
-      </div>
+                  <div className="p-4 rounded-lg">
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                      Duration
+                    </h4>
+                    <p className="text-gray-600 dark:text-gray-300 mb-2">
+                      March 2024 - May 2024
+                    </p>
+                  </div>
 
-      <div className="p-4 rounded-lg">
-        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-          Tech Stack
-        </h4>
-        <p className="text-gray-600 dark:text-gray-300 mb-2">
-          React.js, Tailwind CSS, Django, Python, MongoDB
-        </p>
-      </div>
+                  <div className="p-4 rounded-lg">
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                      Tech Stack
+                    </h4>
+                    <p className="text-gray-600 dark:text-gray-300 mb-2">
+                      React.js, Tailwind CSS, Django, Python, MongoDB
+                    </p>
+                  </div>
 
-      <div className="p-4 rounded-lg">
-        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-          Key Contributions
-        </h4>
-        <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400 space-y-1">
-          <li>Developed responsive UI components using React.js and Tailwind CSS</li>
-          <li>Assisted in requirement analysis, testing, and debugging</li>
-          <li>Collaborated with cross-functional teams to improve system efficiency</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
+                  <div className="p-4 rounded-lg">
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                      Key Contributions
+                    </h4>
+                    <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400 space-y-1">
+                      <li>
+                        Developed responsive UI components using React.js and
+                        Tailwind CSS
+                      </li>
+                      <li>
+                        Assisted in requirement analysis, testing, and debugging
+                      </li>
+                      <li>
+                        Collaborated with cross-functional teams to improve
+                        system efficiency
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/*
             
@@ -493,7 +512,6 @@ function App() {
                 </div>
               </div>
             </div> */}
-
           </div>
 
           <div className="mt-8 flex justify-center">
@@ -567,13 +585,15 @@ function App() {
                 Backend Development
               </h3>
               <div className="flex flex-wrap gap-2">
-                {["Node.js", "Express.js", "Embedded.js","Spring Boot"].map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">
-                    {skill}
-                  </span>
-                ))}
+                {["Node.js", "Express.js", "Embedded.js", "Spring Boot"].map(
+                  (skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">
+                      {skill}
+                    </span>
+                  )
+                )}
               </div>
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
@@ -601,7 +621,7 @@ function App() {
 
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
               <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-              Computer Science Fundamentals
+                Computer Science Fundamentals
               </h3>
               <div className="flex flex-wrap gap-2">
                 {[
