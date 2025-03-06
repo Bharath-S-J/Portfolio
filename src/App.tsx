@@ -418,51 +418,47 @@ function App() {
             </div>
 
             <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl animated-border-card-alt">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                Internship Experience
-              </h3>
-              <div className="space-y-6">
-                <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    Software Developer Intern - Wezenite Technologies
-                  </h4>
+  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+    Internship Experience
+  </h3>
+  <div className="space-y-6">
+    <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
+      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+        Software Developer Intern - Wezenite Technologies
+      </h4>
 
-                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      Duration
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-300 mb-2">
-                      March 2024 - May 2024
-                    </p>
-                  </div>
+      <div className="p-4 rounded-lg">
+        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          Duration
+        </h4>
+        <p className="text-gray-600 dark:text-gray-300 mb-2">
+          March 2024 - May 2024
+        </p>
+      </div>
 
-                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      Tech Stack
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-300 mb-2">
-                      HTML, CSS, JS, Reactjs, Python, MongoDB, Django
-                    </p>
-                  </div>
+      <div className="p-4 rounded-lg">
+        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          Tech Stack
+        </h4>
+        <p className="text-gray-600 dark:text-gray-300 mb-2">
+          React.js, Tailwind CSS, Django, Python, MongoDB
+        </p>
+      </div>
 
-                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      Key Learnings & Contributions
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Gained hands-on experience in software product development
-                    </p>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Explored Machine Learning concepts like number recognition
-                    </p>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Collaborated with a team on requirement analysis and
-                      testing
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div className="p-4 rounded-lg">
+        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          Key Contributions
+        </h4>
+        <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400 space-y-1">
+          <li>Developed responsive UI components using React.js and Tailwind CSS</li>
+          <li>Assisted in requirement analysis, testing, and debugging</li>
+          <li>Collaborated with cross-functional teams to improve system efficiency</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 
             {/*
             
