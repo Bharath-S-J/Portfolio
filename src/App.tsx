@@ -585,7 +585,7 @@ function App() {
                 Backend Development
               </h3>
               <div className="flex flex-wrap gap-2">
-                {["Node.js", "Express.js", "Embedded.js", "Spring Boot"].map(
+                {["Node.js", "Express.js", "Embedded.js", "Spring Boot", "ASP.NET",".NET"].map(
                   (skill) => (
                     <span
                       key={skill}
@@ -604,8 +604,8 @@ function App() {
                 {[
                   "MySQL",
                   "PostgreSQL",
+                  "SQL Server",
                   "MongoDB",
-                  "Firebase",
                   "Docker",
                   "Git",
                   "GitHub",
@@ -634,6 +634,7 @@ function App() {
                   "RESTful APIs",
                   "Linux",
                   "SDLC",
+                  "Performance Optimization",
                   "Software Deployment",
                   "Microservices",
                 ].map((skill) => (
