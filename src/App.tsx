@@ -331,16 +331,11 @@ function App() {
                 Hi, I'm Bharath S J
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-6">
-                Aspiring Software Engineer | Backend, System Design & Cloud
-                Enthusiast
+                {/* Aspiring Software Engineer | Backend, System Design & Cloud
+                Enthusiast */}
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
-                Passionate about building scalable, high-performance
-                applications and solving complex technical challenges. With
-                expertise in backend engineering, system design, full-stack
-                development, and cloud computing, I am actively seeking
-                opportunities in Software Development, Backend Engineering,
-                System Design, Full-Stack Development, and DevOps.
+              Passionate about building scalable, high-performance applications and solving complex technical challenges. With experience in backend engineering, system design, full-stack development, and cloud computing, I thrive on exploring innovative solutions and staying ahead of evolving technologies.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <button
@@ -355,6 +350,28 @@ function App() {
                   View Projects
                   <ChevronDown size={18} className="sm:w-5 sm:h-5" />
                 </button>
+                <div className="flex space-x-6 items-center justify-center pt-3">
+              <a
+                href="https://github.com/Bharath-S-J"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 transition-colors">
+                <Github size={24} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/bharathsj/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 transition-colors">
+                <Linkedin size={24} />
+              </a>
+              <a
+                href="mailto:contactwithbharath@gmail.com"
+                className="hover:text-blue-400 transition-colors">
+                <Mail size={24} />
+              </a>
+            </div>
+                
               </div>
               <h5 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 mt-8">
                 Explore my projects for detailed insights and live demos.
@@ -481,9 +498,7 @@ function App() {
 
             {/*
             
-            will be added in future
-            
-            
+                    
             <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl animated-border-card-alt">
               <div className="flex items-center gap-3 mb-4">
                 <Award className="w-6 h-6 text-blue-600 dark:text-blue-400" />
@@ -514,7 +529,7 @@ function App() {
             </div> */}
           </div>
 
-          <div className="mt-8 flex justify-center">
+          {/* <div className="mt-8 flex justify-center">
             <a
               href="https://raw.githubusercontent.com/Bharath-S-J/CDNImages/main/Other/Bharath_Resume.pdf"
               download
@@ -522,7 +537,7 @@ function App() {
               <Download size={20} />
               Download Resume
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -531,7 +546,7 @@ function App() {
           <div className="flex items-center gap-4 mb-12">
             <Code size={32} className="text-blue-600 dark:text-blue-400" />
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Skills
+            Technologies & Tools I’ve Worked With
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -744,27 +759,6 @@ function App() {
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col items-center space-y-6">
-            <div className="flex space-x-6">
-              <a
-                href="https://github.com/Bharath-S-J"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-400 transition-colors">
-                <Github size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/bharathsj/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-400 transition-colors">
-                <Linkedin size={24} />
-              </a>
-              <a
-                href="mailto:contactwithbharath@gmail.com"
-                className="hover:text-blue-400 transition-colors">
-                <Mail size={24} />
-              </a>
-            </div>
             <p className="text-gray-400">
               © 2025 Bharath S J. All rights reserved.
             </p>
