@@ -624,6 +624,10 @@ function App() {
                   "Docker",
                   "Git",
                   "GitHub",
+                  "CI/CD",
+                  "Jenkins",
+                  "AWS",
+                  "Terraform"
                 ].map((skill) => (
                   <span
                     key={skill}
