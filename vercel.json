@@ -1,9 +1,9 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      }
-    ]
-  }
-  
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://bharathsj.com/$1",
+      "permanent": true
+    }
+  ]
+}
