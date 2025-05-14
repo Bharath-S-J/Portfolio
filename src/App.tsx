@@ -323,7 +323,8 @@ function App() {
 
       <section
         id="about"
-        className="pt-20 sm:pt-24 pb-12 sm:pb-16 px-3 sm:px-4">
+        className="pt-20 sm:pt-24 pb-12 sm:pb-16 px-3 sm:px-4"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1">
@@ -335,43 +336,27 @@ function App() {
                 Enthusiast */}
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
-              Passionate about building scalable, high-performance applications and solving complex technical challenges. With experience in backend engineering, system design, full-stack development, and cloud computing, I thrive on exploring innovative solutions and staying ahead of evolving technologies.
+                Passionate about building scalable, high-performance
+                applications and solving complex technical challenges. With
+                experience in backend engineering, system design, full-stack
+                development, and cloud computing, I thrive on exploring
+                innovative solutions and staying ahead of evolving technologies.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <button
                   onClick={() => scrollToSection("contact")}
-                  className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                  className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                >
                   Get in Touch
                   <Send size={18} className="sm:w-5 sm:h-5" />
                 </button>
                 <button
                   onClick={() => scrollToSection("projects")}
-                  className="inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-gray-700 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300">
+                  className="inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-gray-700 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300"
+                >
                   View Projects
                   <ChevronDown size={18} className="sm:w-5 sm:h-5" />
                 </button>
-                <div className="flex space-x-6 items-center justify-center pt-3">
-              <a
-                href="https://github.com/Bharath-S-J"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-400 transition-colors">
-                <Github size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/bharathsj/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-400 transition-colors">
-                <Linkedin size={24} />
-              </a>
-              <a
-                href="mailto:contactwithbharath@gmail.com"
-                className="hover:text-blue-400 transition-colors">
-                <Mail size={24} />
-              </a>
-            </div>
-                
               </div>
               <h5 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 mt-8">
                 Explore my projects for detailed insights and live demos.
@@ -546,7 +531,7 @@ function App() {
           <div className="flex items-center gap-4 mb-12">
             <Code size={32} className="text-blue-600 dark:text-blue-400" />
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Technologies & Tools I’ve Worked With
+              Technologies & Tools I’ve Worked With
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -567,7 +552,8 @@ function App() {
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
+                  >
                     {skill}
                   </span>
                 ))}
@@ -589,7 +575,8 @@ function App() {
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">
+                    className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm"
+                  >
                     {skill}
                   </span>
                 ))}
@@ -600,15 +587,21 @@ function App() {
                 Backend Development
               </h3>
               <div className="flex flex-wrap gap-2">
-                {["Node.js", "Express.js", "Embedded.js", "Spring Boot", "ASP.NET",".NET"].map(
-                  (skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">
-                      {skill}
-                    </span>
-                  )
-                )}
+                {[
+                  "Node.js",
+                  "Express.js",
+                  "Embedded.js",
+                  "Spring Boot",
+                  "ASP.NET",
+                  ".NET",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
@@ -627,11 +620,12 @@ function App() {
                   "CI/CD",
                   "Jenkins",
                   "AWS",
-                  "Terraform"
+                  "Terraform",
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm">
+                    className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm"
+                  >
                     {skill}
                   </span>
                 ))}
@@ -659,7 +653,8 @@ function App() {
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-sm">
+                    className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-sm"
+                  >
                     {skill}
                   </span>
                 ))}
@@ -763,8 +758,40 @@ function App() {
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col items-center space-y-6">
+            <div className="flex space-x-6 items-center justify-center pt-3">
+              <a
+                href="https://github.com/Bharath-S-J"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 transition-colors"
+              >
+                <Github size={24} />
+              </a>
+              <a
+                href="https://www.leetcode.com/u/bharathsj/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 transition-colors"
+              >
+                <Code size={24} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/bharathsj/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 transition-colors"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a
+                href="mailto:bharath@bharathsj.com"
+                className="hover:text-blue-400 transition-colors"
+              >
+                <Mail size={24} />
+              </a>
+            </div>
             <p className="text-gray-400">
-              © 2025 Bharath S J. All rights reserved.
+              Made with ❤️ by Bharath S J &copy; 2025. All rights reserved.
             </p>
           </div>
         </div>
