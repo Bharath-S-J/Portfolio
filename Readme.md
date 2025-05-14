@@ -96,19 +96,4 @@ postcss.config.js  # PostCSS configuration
 
 ---
 
-## 📞 Contact
-
-You can connect with me through the following platforms:
-
-- **GitHub**: [Bharath S J](https://github.com/Bharath-S-J)  
-  Explore my repositories and projects.
-
-- **LinkedIn**: [Bharath S J](https://www.linkedin.com/in/bharathsj)  
-  Let's connect and discuss potential opportunities.
-
-- **Portfolio**: [Portfolio Website](https://portfolio-bharathsj.vercel.app)  
-
-
----
-
 🚀 **Thank you for visiting my portfolio! Feel free to explore and connect.**
