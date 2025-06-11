@@ -1,5 +1,14 @@
-import React, { useState, useCallback } from 'react';
-import { X, Github, ExternalLink, ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Image as ImageIcon } from 'lucide-react';
+import React, { useState, useCallback } from "react";
+import {
+  X,
+  Github,
+  ExternalLink,
+  ChevronLeft,
+  ChevronRight,
+  ZoomIn,
+  ZoomOut,
+  Image as ImageIcon,
+} from "lucide-react";
 
 interface ProjectModalProps {
   project: {
@@ -24,24 +33,27 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
   const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 });
 
   const getImageName = (url: string) => {
-    const parts = url.split('/');
+    const parts = url.split("/");
     const filename = parts[parts.length - 1];
     // Remove file extension and replace hyphens with spaces
-    return filename.split('.')[0].replace(/-/g, ' ');
+    return filename.split(".")[0].replace(/-/g, " ");
   };
 
   const handlePrevImage = useCallback(() => {
-    setCurrentImageIndex((prev) => 
+    setCurrentImageIndex((prev) =>
       prev === 0 ? (project.gallery?.length || 1) - 1 : prev - 1
     );
     setIsZoomed(false);
   }, [project.gallery?.length]);
 
   const handleNextImage = useCallback(() => {
-    const nextIndex = currentImageIndex === (project.gallery?.length || 1) - 1 ? 0 : currentImageIndex + 1;
+    const nextIndex =
+      currentImageIndex === (project.gallery?.length || 1) - 1
+        ? 0
+        : currentImageIndex + 1;
     setCurrentImageIndex(nextIndex);
     setIsZoomed(false);
-    
+
     if (project.gallery?.[nextIndex]) {
       const img = new Image();
       img.src = project.gallery[nextIndex];
@@ -51,32 +63,38 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
     }
   }, [currentImageIndex, project.gallery]);
 
-  const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    if (e.key === 'ArrowLeft') handlePrevImage();
-    if (e.key === 'ArrowRight') handleNextImage();
-    if (e.key === 'Escape') {
-      if (isZoomed) {
-        setIsZoomed(false);
-      } else {
-        setShowGallery(false);
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") handlePrevImage();
+      if (e.key === "ArrowRight") handleNextImage();
+      if (e.key === "Escape") {
+        if (isZoomed) {
+          setIsZoomed(false);
+        } else {
+          setShowGallery(false);
+        }
       }
-    }
-  }, [handlePrevImage, handleNextImage, isZoomed]);
+    },
+    [handlePrevImage, handleNextImage, isZoomed]
+  );
 
-  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    if (!isZoomed) return;
-    
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    
-    setZoomPosition({ x, y });
-  }, [isZoomed]);
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      if (!isZoomed) return;
+
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+      setZoomPosition({ x, y });
+    },
+    [isZoomed]
+  );
 
   React.useEffect(() => {
     if (showGallery) {
-      window.addEventListener('keydown', handleKeyDown);
-      return () => window.removeEventListener('keydown', handleKeyDown);
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
     }
   }, [showGallery, handleKeyDown]);
 
@@ -89,35 +107,43 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         >
           <X size={20} className="sm:w-6 sm:h-6" />
         </button>
-        
+
         {/* Image Name Display */}
         <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-50">
           <h3 className="text-white text-lg sm:text-xl font-medium px-4 py-2 bg-black/50 rounded-lg">
-            {project.gallery?.[currentImageIndex] ? getImageName(project.gallery[currentImageIndex]) : ''}
+            {project.gallery?.[currentImageIndex]
+              ? getImageName(project.gallery[currentImageIndex])
+              : ""}
           </h3>
         </div>
 
-        <div 
+        <div
           className="relative h-full flex items-center justify-center"
           onMouseMove={handleMouseMove}
           onClick={() => setIsZoomed(!isZoomed)}
         >
           {project.gallery?.[currentImageIndex] && (
-            <div className={`
+            <div
+              className={`
               relative w-full h-full flex items-center justify-center
-              ${isZoomed ? 'cursor-zoom-out overflow-hidden' : 'cursor-zoom-in'}
-            `}>
+              ${isZoomed ? "cursor-zoom-out overflow-hidden" : "cursor-zoom-in"}
+            `}
+            >
               <img
                 src={project.gallery[currentImageIndex]}
                 alt={`Project image ${currentImageIndex + 1}`}
                 className={`
                   max-h-[85vh] sm:max-h-[90vh] w-auto object-contain transition-transform duration-300
-                  ${isZoomed ? 'scale-[2.5] sm:scale-[2]' : 'scale-100'}
+                  ${isZoomed ? "scale-[2.5] sm:scale-[2]" : "scale-100"}
                 `}
-                style={isZoomed ? {
-                  transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%`
-                } : undefined}
-                loading={loadedImages.has(currentImageIndex) ? 'eager' : 'lazy'}
+                style={
+                  isZoomed
+                    ? {
+                        transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%`,
+                      }
+                    : undefined
+                }
+                loading={loadedImages.has(currentImageIndex) ? "eager" : "lazy"}
               />
             </div>
           )}
@@ -172,7 +198,9 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   setIsZoomed(false);
                 }}
                 className={`relative ${
-                  currentImageIndex === index ? 'ring-2 ring-blue-500' : 'opacity-50 hover:opacity-100'
+                  currentImageIndex === index
+                    ? "ring-2 ring-blue-500"
+                    : "opacity-50 hover:opacity-100"
                 }`}
               >
                 <img
@@ -193,7 +221,9 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-2 sm:p-4 z-40 overflow-y-auto">
       <div className="bg-white dark:bg-gray-800 rounded-xl w-full max-w-3xl max-h-[90vh] overflow-y-auto">
         <div className="sticky top-0 bg-white dark:bg-gray-800 p-3 sm:p-4 border-b dark:border-gray-700 flex justify-between items-center">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white">{project.title}</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
+            {project.title}
+          </h2>
           <button
             onClick={onClose}
             className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300"
@@ -201,7 +231,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             <X size={20} />
           </button>
         </div>
-        
+
         <div className="p-3 sm:p-4 md:p-6">
           <div className="relative group">
             <img
@@ -222,12 +252,18 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
           <div className="space-y-4">
             <div>
-              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-gray-900 dark:text-white">Description</h3>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">{project.description}</p>
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+                Description
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                {project.description}
+              </p>
             </div>
-            
+
             <div>
-              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-gray-900 dark:text-white">Technologies</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+                Technologies
+              </h3>
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {project.technologies.map((tech) => (
                   <span
@@ -239,21 +275,27 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 ))}
               </div>
             </div>
-            
+
             <div>
-              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-gray-900 dark:text-white">Key Features</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+                Key Features
+              </h3>
               <ul className="list-disc list-inside space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-600 dark:text-gray-300">
                 {project.features.map((feature, index) => (
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
             </div>
-            
+
             <div>
-              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-gray-900 dark:text-white">Challenges & Solutions</h3>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">{project.challenges}</p>
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+                Challenges & Solutions
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                {project.challenges}
+              </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
               <a
                 href={project.githubUrl}

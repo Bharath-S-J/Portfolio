@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from 'react-helmet-async';
 import {
   Github,
   Linkedin,
@@ -21,42 +22,42 @@ import { motion } from "framer-motion";
 const projects = [
   {
     id: 1,
-    title: "Task Master",
+    title: "Intent Chat - Real-Time Messaging App",
     description:
-      "A modern React-based Todo application with Firebase authentication, designed for efficient task management while ensuring secure login, real-time synchronization, and password recovery.",
+      "A full-stack real-time chat application with secure authentication, contact-based messaging restrictions, theme customization, and live communication powered by Socket.IO. The system includes smart invite-based onboarding, optimized data flow, and modular architecture for scalability and performance.",
     technologies: [
-      "React",
+      "React (Vite)",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Zustand",
+      "Socket.IO",
+      "Cloudinary",
       "Tailwind CSS",
-      "Vite",
-      "ESLint",
-      "Git",
-      "TypeScript",
-      "Firebase (Firestore, Authentication)",
-      "React Router DOM",
     ],
     imageUrl:
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/thumbnail.jpg",
-    githubUrl: "https://github.com/Bharath-S-J/Task-Master",
-    demoUrl: "https://task-master-jade-beta.vercel.app/",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Intent_Chat_Thumbnail.png",
+    githubUrl: "https://github.com/Bharath-S-J/Intent-Chat",
+
     features: [
-      "🔐 Authentication - Email/Password, Google OAuth, Email verification",
-      "✅ Task Management - Add, edit, delete, and mark tasks as completed",
-      "🔄 Real-time Sync - Firebase Firestore for live task updates",
-      "📩 Email Verification - Users must verify their email before gaining access, enhancing security.",
-      "🔑 Security - Protected routes, password reset, and forgot password options",
-      "🚀 Performance - Fast loading with Vite and optimized rendering",
-      "🎨 Minimal UI - Responsive design with a user-friendly interface",
-      "🔒 Protected Routes - Ensures only authenticated users can access certain pages.",
-      "⚡ Error Handling & Validation - Comprehensive input validation and real-time error messaging.",
+      "🔐 Authentication - JWT-based login, signup, and session management",
+      "📧 Email Invites - Invite friends via email; invited users become direct contacts",
+      "👥 Contact Management - Add/remove contacts, real-time online status tracking",
+      "💬 Messaging System - Real-time messaging with support for images (Cloudinary upload)",
+      "📊 Message Limits - Only 5 messages allowed unless the receiver replies (then auto-friend)",
+      "🎨 Theme Support - Light/dark themes with local storage persistence",
+      "🧠 Optimized Data - Server-side filtering to minimize frontend load",
+      "🛰️ Sockets - Live communication and presence tracking with efficient connection handling",
     ],
     challenges:
-      "Ensuring real-time synchronization, secure authentication, and optimized performance was achieved by leveraging Firebase Firestore for instant updates, implementing authentication with Google and email verification, and using Vite for fast and efficient development.",
+      "Designing the contact invitation flow required custom email integration with Nodemailer, dynamic route generation, and secure invite token handling. Ensuring clean socket lifecycle management across login/logout while maintaining real-time presence and message flow was also carefully addressed.",
     gallery: [
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/LandingPage.png",
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/Login.png",
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/RegisterPage.png",
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/DashBoard.png",
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/ResetPassword.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Create_Account.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/SigIn.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Chating_DashBoard.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Contacts_Management.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Profile.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Settings.png",
     ],
   },
   {
@@ -106,6 +107,48 @@ const projects = [
 
   {
     id: 3,
+    title: "Task Master",
+    description:
+      "A full-stack productivity app built with React and a custom Node.js backend, designed for efficient task management with secure authentication, real-time sync, email/web notifications, and reminder scheduling.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      "Firebase (Firestore, Authentication)",
+      "Node.js",
+      "Express.js",
+      "ESLint",
+      "Git",
+    ],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/thumbnail.jpg",
+    githubUrl: "https://github.com/Bharath-S-J/Task-Master-fullstack",
+    demoUrl: "https://task-master-jade-beta.vercel.app/",
+    features: [
+      "🔐 Authentication - Email/Password, Google OAuth, Email verification (via Firebase)",
+      "✅ Task Management - Create, update, delete, and mark tasks as completed",
+      "🔄 Real-time Sync - Firestore ensures live updates across devices",
+      "📬 Email Reminders - Custom Node.js backend handles scheduled email reminders for tasks",
+      "🔔 Web Notifications - In-browser notifications for active users when reminders are triggered",
+      "🔑 Protected Routes - Ensures secure access only for authenticated users",
+      "🚀 Performance - Built with Vite and optimized for speed",
+      "🎨 Clean UI - Fully responsive design with a minimal and modern look",
+      "⚡ Robust Error Handling - Real-time validations with clear feedback",
+    ],
+    challenges:
+      "Building a custom scheduling system using Node.js and Express for sending timely task reminder emails was the core challenge. This included setting up cron jobs and reliable mail delivery (using nodemailer and scheduling libraries). Integrating with Firestore while maintaining performance and security required careful orchestration between the frontend and backend.",
+    gallery: [
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/LandingPage.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/Login.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/RegisterPage.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/DashBoard.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/TaskMasterImages/ResetPassword.png",
+    ],
+  },
+
+  {
+    id: 4,
     title: "Total Bank Manager",
     description:
       "A robust banking management system built using Java (Swing) and MySQL, designed to streamline banking operations with a three-tier user access model. Customers can register, manage accounts, and perform transactions, while employees handle verifications and customer support. Managers oversee bank operations, track financial trends, and manage employees. The system integrates email verification, graphical analytics, and automated account handling for a fully digital banking experience.",
@@ -160,7 +203,45 @@ const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
+    title: "NodePress - Blogging Platform",
+    description:
+      "A secure and full-featured blogging platform built with Node.js, Express, MongoDB, and EJS. Users can register, log in, and manage their own blog posts with proper access control and session-based authentication.",
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "EJS",
+      "MongoDB Atlas",
+      "Mongoose",
+      "express-session",
+      "bcrypt",
+      "CSS",
+    ],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/NodePressImages/Node_Press_Thumbnail.png",
+    githubUrl: "https://github.com/Bharath-S-J/NodePress",
+    features: [
+      "📝 User Registration & Login with secure session management",
+      "🔐 Session-based Authentication using express-session",
+      "🔒 Password Hashing via bcrypt for secure credential storage",
+      "✍️ Full CRUD operations on blog posts",
+      "🧑‍💻 Only authors can edit or delete their own posts",
+      "🛡️ Protected Routes enforced via middleware",
+      "📄 Dynamic Server-Side Rendering using EJS",
+      "💬 Flash messaging system for user feedback",
+    ],
+    challenges:
+      "Implementing secure session handling and enforcing route protection required custom middleware logic to ensure only authenticated users—and specifically, original authors—could manage blog content.",
+    gallery: [
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/NodePressImages/SignUp_Page.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/NodePressImages/Login_Page.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/NodePressImages/Home_Page.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/NodePressImages/Add_Blog_Page.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/NodePressImages/My_Blogs_Page.png",
+    ],
+  },
+  {
+    id: 6,
     title: "Finance Flow",
     description:
       "A comprehensive desktop application designed for managing loan applications, processing, and tracking. Built with Python and MySQL, it automates financial workflows, ensuring secure document storage, EMI tracking, and role-based access for users and admins.",
@@ -198,8 +279,44 @@ const projects = [
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/FinanceFlowImages/RemainingEmiDisplayer.png",
     ],
   },
+
   {
-    id: 5,
+    id: 7,
+    title: "Virtual Agri-Marketplace",
+    description:
+      "A web-based platform that connects farmers and buyers, enabling direct agricultural product trading while eliminating intermediaries. The platform ensures fair pricing, inventory management, and order tracking for both farmers and buyers.",
+    technologies: ["PHP", "MySQL", "HTML ", "CSS", "JavaScript", "Bootstrap"],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/thumbnail.jpg",
+    githubUrl: "https://github.com/Bharath-S-J/Virtual-Agri-Marketplace",
+
+    features: [
+      "🔒 Authentication - Secure registration, login, and role-based access (Farmer/Buyer)",
+      "🌾 Farmer Features - Product listing, inventory management, sales tracking",
+      "🛒 Buyer Features - Product browsing, cart management, order processing",
+      "📦 Order & Inventory Management - Automated stock validation, secure order tracking",
+      "🛡️ Security - Password hashing, SQL injection prevention, session management",
+    ],
+    challenges:
+      "Ensuring real-time inventory updates and secure user authentication was addressed by implementing automated stock validation, password hashing for credentials, and session-based authentication to enhance security and prevent unauthorized access.",
+    gallery: [
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/RegisterPage.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/LoginPage.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/FarmerDashboard.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/FarmerProfileEdit.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/FarmerSellProducts.png",
+
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/FarmerViewProducts.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/FarmerPasswordReset.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/BuyerDashboard.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/BuyerProductsPage.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/BuyerCartView.png",
+
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/BuyerOrderViews.png",
+    ],
+  },
+  {
+    id: 8,
     title: "Digital Due Records",
     description:
       "A C-based digital ledger system designed to replace traditional 'Katha' books used in Indian stores. This project streamlines customer due management, bill generation, and record-keeping while ensuring secure authentication and efficient store management.",
@@ -247,41 +364,6 @@ const projects = [
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/DigitalDueRecordsImages/TotalSumAndCount.png",
     ],
   },
-  {
-    id: 6,
-    title: "Virtual Agri-Marketplace",
-    description:
-      "A web-based platform that connects farmers and buyers, enabling direct agricultural product trading while eliminating intermediaries. The platform ensures fair pricing, inventory management, and order tracking for both farmers and buyers.",
-    technologies: ["PHP", "MySQL", "HTML ", "CSS", "JavaScript", "Bootstrap"],
-    imageUrl:
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/thumbnail.jpg",
-    githubUrl: "https://github.com/Bharath-S-J/Virtual-Agri-Marketplace",
-
-    features: [
-      "🔒 Authentication - Secure registration, login, and role-based access (Farmer/Buyer)",
-      "🌾 Farmer Features - Product listing, inventory management, sales tracking",
-      "🛒 Buyer Features - Product browsing, cart management, order processing",
-      "📦 Order & Inventory Management - Automated stock validation, secure order tracking",
-      "🛡️ Security - Password hashing, SQL injection prevention, session management",
-    ],
-    challenges:
-      "Ensuring real-time inventory updates and secure user authentication was addressed by implementing automated stock validation, password hashing for credentials, and session-based authentication to enhance security and prevent unauthorized access.",
-    gallery: [
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/RegisterPage.png",
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/LoginPage.png",
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/FarmerDashboard.png",
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/FarmerProfileEdit.png",
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/FarmerSellProducts.png",
-
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/FarmerViewProducts.png",
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/FarmerPasswordReset.png",
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/BuyerDashboard.png",
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/BuyerProductsPage.png",
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/BuyerCartView.png",
-
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/VirtualAgriMarketplaceImages/BuyerOrderViews.png",
-    ],
-  },
 ];
 
 function App() {
@@ -313,7 +395,27 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
+    <>
+    <Helmet>
+        <title>Bharath S J</title>
+        <meta name="description" content="Portfolio of Bharath S J – Developer building creative and scalable web applications." />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Bharath S J" />
+        <meta property="og:description" content="Explore my projects and accomplishments." />
+        <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/Other/ProfileImage.png" />
+        <meta property="og:url" content="https://bharathsj.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* Social Cards */}
+        <meta property="og:site_name" content="Bharath S J" />
+        <meta property="article:author" content="https://www.linkedin.com/in/bharathsj/" />
+        <meta name="author" content="Bharath S J" />
+
+        {/* Canonical */}
+        <link rel="canonical" href="https://bharathsj.com/" />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
       <Navbar
         currentSection={currentSection}
         onNavigate={scrollToSection}
@@ -667,7 +769,7 @@ function App() {
               </h3>
               <div className="text-gray-600 dark:text-gray-300">
                 <p className="mb-2">• 1 Internship (Software Development)</p>
-                <p>• 6+ projects</p>
+                <p>• 20+ projects</p>
                 <p>• Hosted projects with live demonstrations</p>
                 <p>
                   • Strong foundation in backend, databases, and cloud
@@ -804,6 +906,9 @@ function App() {
         />
       )}
     </div>
+
+    </>
+    
   );
 }
 
