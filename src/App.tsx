@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 import {
   Github,
   Linkedin,
@@ -21,7 +21,45 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    id: 1,
+  id: 1,
+  title: "cfapi – Code-Free API Generator (CLI + OpenAPI)",
+  description:
+    "cfapi is a powerful CLI tool that auto-generates full-featured REST APIs from just a simple schema file. It supports both mock data (JSON) and MongoDB (Mongoose), handles validation, routing, controller logic, OpenAPI specs, and scaffolds ready-to-run servers — all without writing boilerplate.",
+  technologies: [
+    "Node.js",
+    "Express",
+    "RestAPI",
+    "Automation",
+    "Mongoose",
+    "JSON Schema",
+    "OpenAPI 3.0",
+    "Regex Validation",
+    "dotenv",
+    "ES Modules",
+  ],
+  imageUrl:
+    "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/CfapiImages/CfapiThumbnail.png", // Update with final thumbnail
+  githubUrl: "https://github.com/Bharath-S-J/cfapi",
+  features: [
+    "⚙️ CLI-Based Generation - Define schema and instantly scaffold a full backend",
+    "🧪 Input Validation - Built-in validators for strings, numbers, enums, regex, etc.",
+    "📦 Dual Engines - Support for both MongoDB (via Mongoose) and mock JSON data",
+    "🔄 Full REST Support - Generates routes, controllers, middlewares, and models",
+    "📃 OpenAPI Generation - Automatically creates OpenAPI 3.0 specs and model docs",
+    "🚀 Zero Config Start - Built-in `.env`, server, and default data for fast local runs",
+    "🛠️ Extendable - Fully modular generators for custom engine or format support",
+    "📁 Real Examples - Includes working examples for 2 schemas with both engines",
+    "📦 Published on npm - Available via `@bharathsj/cfapi` for easy installation and use",
+  ],
+  challenges:
+    "Building a robust schema parser that supports deep nesting, validation constraints (like regex, enum, required), references, and arrays across both MongoDB and mock engines was key. Also ensured OpenAPI accuracy with schema-driven specs, and implemented CLI-level flexibility using Commander.js and custom config support.",
+  gallery: [
+    "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/CfapiImages/mock.png",
+    "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/CfapiImages/mongo.png",
+  ],
+},
+  {
+    id: 2,
     title: "Intent Chat - Real-Time Messaging App",
     description:
       "A full-stack real-time chat application with secure authentication, contact-based messaging restrictions, theme customization, and live communication powered by Socket.IO. The system includes smart invite-based onboarding, optimized data flow, and modular architecture for scalability and performance.",
@@ -61,7 +99,7 @@ const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Spring Boot Microservices",
     description:
       "A full-fledged microservices architecture using Spring Boot, designed to provide a scalable and efficient backend system with an API Gateway, authentication via Keycloak, real-time monitoring with Grafana, and asynchronous messaging using Kafka.",
@@ -106,7 +144,7 @@ const projects = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Task Master",
     description:
       "A full-stack productivity app built with React and a custom Node.js backend, designed for efficient task management with secure authentication, real-time sync, email/web notifications, and reminder scheduling.",
@@ -148,7 +186,7 @@ const projects = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Total Bank Manager",
     description:
       "A robust banking management system built using Java (Swing) and MySQL, designed to streamline banking operations with a three-tier user access model. Customers can register, manage accounts, and perform transactions, while employees handle verifications and customer support. Managers oversee bank operations, track financial trends, and manage employees. The system integrates email verification, graphical analytics, and automated account handling for a fully digital banking experience.",
@@ -203,7 +241,7 @@ const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "NodePress - Blogging Platform",
     description:
       "A secure and full-featured blogging platform built with Node.js, Express, MongoDB, and EJS. Users can register, log in, and manage their own blog posts with proper access control and session-based authentication.",
@@ -241,7 +279,7 @@ const projects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Finance Flow",
     description:
       "A comprehensive desktop application designed for managing loan applications, processing, and tracking. Built with Python and MySQL, it automates financial workflows, ensuring secure document storage, EMI tracking, and role-based access for users and admins.",
@@ -281,7 +319,7 @@ const projects = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Virtual Agri-Marketplace",
     description:
       "A web-based platform that connects farmers and buyers, enabling direct agricultural product trading while eliminating intermediaries. The platform ensures fair pricing, inventory management, and order tracking for both farmers and buyers.",
@@ -316,7 +354,7 @@ const projects = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "Digital Due Records",
     description:
       "A C-based digital ledger system designed to replace traditional 'Katha' books used in Indian stores. This project streamlines customer due management, bill generation, and record-keeping while ensuring secure authentication and efficient store management.",
@@ -396,194 +434,212 @@ function App() {
 
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>Bharath S J</title>
-        <meta name="description" content="Portfolio of Bharath S J – Developer building creative and scalable web applications." />
-        
+        <meta
+          name="description"
+          content="Portfolio of Bharath S J – Developer building creative and scalable web applications."
+        />
+
         {/* Open Graph */}
         <meta property="og:title" content="Bharath S J" />
-        <meta property="og:description" content="Explore my projects and accomplishments." />
-        <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/Other/ProfileImage.png" />
+        <meta
+          property="og:description"
+          content="Explore my projects and accomplishments."
+        />
+        <meta
+          property="og:image"
+          content="https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/Other/ProfileImage.png"
+        />
         <meta property="og:url" content="https://bharathsj.com/" />
         <meta property="og:type" content="website" />
 
         {/* Social Cards */}
         <meta property="og:site_name" content="Bharath S J" />
-        <meta property="article:author" content="https://www.linkedin.com/in/bharathsj/" />
+        <meta
+          property="article:author"
+          content="https://www.linkedin.com/in/bharathsj/"
+        />
         <meta name="author" content="Bharath S J" />
 
         {/* Canonical */}
         <link rel="canonical" href="https://bharathsj.com/" />
       </Helmet>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
-      <Navbar
-        currentSection={currentSection}
-        onNavigate={scrollToSection}
-        isDark={isDark}
-        onToggleTheme={() => setIsDark(!isDark)}
-      />
+        <Navbar
+          currentSection={currentSection}
+          onNavigate={scrollToSection}
+          isDark={isDark}
+          onToggleTheme={() => setIsDark(!isDark)}
+        />
 
-      <section
-        id="about"
-        className="pt-20 sm:pt-24 pb-12 sm:pb-16 px-3 sm:px-4"
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-                Hi, I'm Bharath S J
-              </h1>
-              <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-6">
-                {/* Aspiring Software Engineer | Backend, System Design & Cloud
+        <section
+          id="about"
+          className="pt-20 sm:pt-24 pb-12 sm:pb-16 px-3 sm:px-4"
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+                  Hi, I'm Bharath S J
+                </h1>
+                <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-6">
+                  {/* Aspiring Software Engineer | Backend, System Design & Cloud
                 Enthusiast */}
-              </p>
-              <p className="text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
-                Passionate about building scalable, high-performance
-                applications and solving complex technical challenges. With
-                experience in backend engineering, system design, full-stack
-                development, and cloud computing, I thrive on exploring
-                innovative solutions and staying ahead of evolving technologies.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <button
-                  onClick={() => scrollToSection("contact")}
-                  className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Get in Touch
-                  <Send size={18} className="sm:w-5 sm:h-5" />
-                </button>
-                <button
-                  onClick={() => scrollToSection("projects")}
-                  className="inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-gray-700 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300"
-                >
-                  View Projects
-                  <ChevronDown size={18} className="sm:w-5 sm:h-5" />
-                </button>
+                </p>
+                <p className="text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
+                  Passionate about building scalable, high-performance
+                  applications and solving complex technical challenges. With
+                  experience in backend engineering, system design, full-stack
+                  development, and cloud computing, I thrive on exploring
+                  innovative solutions and staying ahead of evolving
+                  technologies.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <button
+                    onClick={() => scrollToSection("contact")}
+                    className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Get in Touch
+                    <Send size={18} className="sm:w-5 sm:h-5" />
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("projects")}
+                    className="inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-gray-700 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300"
+                  >
+                    View Projects
+                    <ChevronDown size={18} className="sm:w-5 sm:h-5" />
+                  </button>
+                </div>
+                <h5 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 mt-8">
+                  Explore my projects for detailed insights and live demos.
+                </h5>
               </div>
-              <h5 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 mt-8">
-                Explore my projects for detailed insights and live demos.
-              </h5>
-            </div>
 
-            {/* Profile Image with Hover Animation */}
-            <div className="order-1 md:order-2 px-4 sm:px-0 flex justify-center">
-              <motion.img
-                src="https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/Other/ProfileImage.png"
-                alt="Profile"
-                className="rounded-2xl shadow-2xl w-full max-w-sm mx-auto"
-                whileHover={{
-                  scale: 1.1,
-                  rotate: 2,
-                  boxShadow: "0px 10px 30px rgba(0, 102, 255, 0.4)",
-                }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
+              {/* Profile Image with Hover Animation */}
+              <div className="order-1 md:order-2 px-4 sm:px-0 flex justify-center">
+                <motion.img
+                  src="https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/Other/ProfileImage.png"
+                  alt="Profile"
+                  className="rounded-2xl shadow-2xl w-full max-w-sm mx-auto"
+                  whileHover={{
+                    scale: 1.1,
+                    rotate: 2,
+                    boxShadow: "0px 10px 30px rgba(0, 102, 255, 0.4)",
+                  }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="education"
+          className="py-16 px-4 bg-white dark:bg-gray-800"
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center gap-4 mb-12">
+              <GraduationCap
+                size={32}
+                className="text-blue-600 dark:text-blue-400"
               />
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+                Education
+              </h2>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="education" className="py-16 px-4 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-4 mb-12">
-            <GraduationCap
-              size={32}
-              className="text-blue-600 dark:text-blue-400"
-            />
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Education
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl animated-border-card-alt">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                Academic Background
-              </h3>
-              <div className="space-y-6">
-                <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    Bachelor of Engineering in Computer Science
-                  </h4>
-                  <p className="text-gray-600 dark:text-gray-300 mb-2">
-                    New Horizon College of Engineering, Bengaluru | 2020 - 2024
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Relevant Coursework: Data Structures, Algorithms, Database
-                    Management, Operating Systems, Computer Networks
-                  </p>
-                </div>
-
-                <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    Pre-University (PCMB)
-                  </h4>
-                  <p className="text-gray-600 dark:text-gray-300 mb-2">
-                    Sri Maruthi PU College, Hoskote | 2018 - 2020
-                  </p>
-                </div>
-
-                <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    High School
-                  </h4>
-                  <p className="text-gray-600 dark:text-gray-300 mb-2">
-                    Global High School, Pillagumpe | 2006 – 2018
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl animated-border-card-alt">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                Internship Experience
-              </h3>
-              <div className="space-y-6">
-                <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    Software Developer Intern - Wezenite Technologies
-                  </h4>
-
-                  <div className="p-4 rounded-lg">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl animated-border-card-alt">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                  Academic Background
+                </h3>
+                <div className="space-y-6">
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      Duration
+                      Bachelor of Engineering in Computer Science
                     </h4>
                     <p className="text-gray-600 dark:text-gray-300 mb-2">
-                      March 2024 - May 2024
+                      New Horizon College of Engineering, Bengaluru | 2020 -
+                      2024
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      Relevant Coursework: Data Structures, Algorithms, Database
+                      Management, Operating Systems, Computer Networks
                     </p>
                   </div>
 
-                  <div className="p-4 rounded-lg">
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      Tech Stack
+                      Pre-University (PCMB)
                     </h4>
                     <p className="text-gray-600 dark:text-gray-300 mb-2">
-                      React.js, Tailwind CSS, Django, Python, MongoDB
+                      Sri Maruthi PU College, Hoskote | 2018 - 2020
                     </p>
                   </div>
 
-                  <div className="p-4 rounded-lg">
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                      Key Contributions
+                      High School
                     </h4>
-                    <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400 space-y-1">
-                      <li>
-                        Developed responsive UI components using React.js and
-                        Tailwind CSS
-                      </li>
-                      <li>
-                        Assisted in requirement analysis, testing, and debugging
-                      </li>
-                      <li>
-                        Collaborated with cross-functional teams to improve
-                        system efficiency
-                      </li>
-                    </ul>
+                    <p className="text-gray-600 dark:text-gray-300 mb-2">
+                      Global High School, Pillagumpe | 2006 – 2018
+                    </p>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/*
+              <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl animated-border-card-alt">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                  Internship Experience
+                </h3>
+                <div className="space-y-6">
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                      Software Developer Intern - Wezenite Technologies
+                    </h4>
+
+                    <div className="p-4 rounded-lg">
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                        Duration
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-300 mb-2">
+                        March 2024 - May 2024
+                      </p>
+                    </div>
+
+                    <div className="p-4 rounded-lg">
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                        Tech Stack
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-300 mb-2">
+                        React.js, Tailwind CSS, Django, Python, MongoDB
+                      </p>
+                    </div>
+
+                    <div className="p-4 rounded-lg">
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                        Key Contributions
+                      </h4>
+                      <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400 space-y-1">
+                        <li>
+                          Developed responsive UI components using React.js and
+                          Tailwind CSS
+                        </li>
+                        <li>
+                          Assisted in requirement analysis, testing, and
+                          debugging
+                        </li>
+                        <li>
+                          Collaborated with cross-functional teams to improve
+                          system efficiency
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/*
             
                     
             <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl animated-border-card-alt">
@@ -614,9 +670,9 @@ function App() {
                 </div>
               </div>
             </div> */}
-          </div>
+            </div>
 
-          {/* <div className="mt-8 flex justify-center">
+            {/* <div className="mt-8 flex justify-center">
             <a
               href="https://raw.githubusercontent.com/Bharath-S-J/CDNImages/main/Other/Bharath_Resume.pdf"
               download
@@ -625,290 +681,291 @@ function App() {
               Download Resume
             </a>
           </div> */}
-        </div>
-      </section>
-
-      <section id="skills" className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-4 mb-12">
-            <Code size={32} className="text-blue-600 dark:text-blue-400" />
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Technologies & Tools I’ve Worked With
-            </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                Programming Languages
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "C",
-                  "C++",
-                  "C#",
-                  "Java",
-                  "Python",
-                  "PHP",
-                  "JavaScript",
-                  "TypeScript",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                Frontend Development
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "HTML",
-                  "CSS",
-                  "React",
-                  "Angular",
-                  "jQuery",
-                  "Bootstrap",
-                  "Tailwind",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                Backend Development
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "Node.js",
-                  "Express.js",
-                  "Embedded.js",
-                  "Spring Boot",
-                  "ASP.NET",
-                  ".NET",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                Databases & DevOps
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "MySQL",
-                  "PostgreSQL",
-                  "SQL Server",
-                  "MongoDB",
-                  "Docker",
-                  "Git",
-                  "GitHub",
-                  "CI/CD",
-                  "Jenkins",
-                  "AWS",
-                  "Terraform",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+        </section>
 
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                Computer Science Fundamentals
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "DSA",
-                  "OOP",
-                  "System Design",
-                  "DBMS",
-                  "OS",
-                  "CN",
-                  "RESTful APIs",
-                  "Linux",
-                  "SDLC",
-                  "Performance Optimization",
-                  "Software Deployment",
-                  "Microservices",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-sm"
-                  >
-                    {skill}
-                  </span>
-                ))}
+        <section id="skills" className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center gap-4 mb-12">
+              <Code size={32} className="text-blue-600 dark:text-blue-400" />
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+                Technologies & Tools I’ve Worked With
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+                  Programming Languages
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "C",
+                    "C++",
+                    "C#",
+                    "Java",
+                    "Python",
+                    "PHP",
+                    "JavaScript",
+                    "TypeScript",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+                  Frontend Development
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "HTML",
+                    "CSS",
+                    "React",
+                    "Angular",
+                    "jQuery",
+                    "Bootstrap",
+                    "Tailwind",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+                  Backend Development
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Node.js",
+                    "Express.js",
+                    "Embedded.js",
+                    "Spring Boot",
+                    "ASP.NET",
+                    ".NET",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+                  Databases & DevOps
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "MySQL",
+                    "PostgreSQL",
+                    "SQL Server",
+                    "MongoDB",
+                    "Docker",
+                    "Git",
+                    "GitHub",
+                    "CI/CD",
+                    "Jenkins",
+                    "AWS",
+                    "Terraform",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+                  Computer Science Fundamentals
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "DSA",
+                    "OOP",
+                    "System Design",
+                    "DBMS",
+                    "OS",
+                    "CN",
+                    "RESTful APIs",
+                    "Linux",
+                    "SDLC",
+                    "Performance Optimization",
+                    "Software Deployment",
+                    "Microservices",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+                  Professional Experience
+                </h3>
+                <div className="text-gray-600 dark:text-gray-300">
+                  <p className="mb-2">• 1 Internship (Software Development)</p>
+                  <p>• 20+ projects</p>
+                  <p>• Hosted projects with live demonstrations</p>
+                  <p>
+                    • Strong foundation in backend, databases, and cloud
+                    deployment
+                  </p>
+                </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                Professional Experience
-              </h3>
-              <div className="text-gray-600 dark:text-gray-300">
-                <p className="mb-2">• 1 Internship (Software Development)</p>
-                <p>• 20+ projects</p>
-                <p>• Hosted projects with live demonstrations</p>
-                <p>
-                  • Strong foundation in backend, databases, and cloud
-                  deployment
+        <section id="projects" className="py-16 px-4 bg-white dark:bg-gray-800">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center gap-4 mb-12">
+              <Briefcase
+                size={32}
+                className="text-blue-600 dark:text-blue-400"
+              />
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+                Projects
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects.map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  {...project}
+                  onClick={() => setSelectedProject(project)}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="interests" className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center gap-4 mb-12">
+              <Heart size={32} className="text-blue-600 dark:text-blue-400" />
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+                Personal Interests
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+                  Problem Solving & Algorithmic Thinking
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Continuously improving problem-solving skills, focusing on
+                  algorithms, data structures, and optimizing code efficiency.
+                </p>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+                  Project Development
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Built multiple production-ready projects, integrating various
+                  technologies and best practices to enhance scalability and
+                  performance.
+                </p>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+                  Continuous Learning
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Passionate about exploring new technologies, improving
+                  existing skills, and staying up to date with industry trends.
                 </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="projects" className="py-16 px-4 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-4 mb-12">
-            <Briefcase size={32} className="text-blue-600 dark:text-blue-400" />
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Projects
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                {...project}
-                onClick={() => setSelectedProject(project)}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="interests" className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-4 mb-12">
-            <Heart size={32} className="text-blue-600 dark:text-blue-400" />
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Personal Interests
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                Problem Solving & Algorithmic Thinking
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                Continuously improving problem-solving skills, focusing on
-                algorithms, data structures, and optimizing code efficiency.
+        <section id="contact" className="py-16 px-4 bg-white dark:bg-gray-800">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Get in Touch
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                Have an idea, a project, or just want to connect? Feel free to
+                reach out. always open to discussions and collaborations!
               </p>
             </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                Project Development
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                Built multiple production-ready projects, integrating various
-                technologies and best practices to enhance scalability and
-                performance.
-              </p>
-            </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg animated-border-card-alt">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                Continuous Learning
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                Passionate about exploring new technologies, improving existing
-                skills, and staying up to date with industry trends.
+            <ContactForm />
+          </div>
+        </section>
+
+        <footer className="bg-gray-900 text-white py-12">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex flex-col items-center space-y-6">
+              <div className="flex space-x-6 items-center justify-center pt-3">
+                <a
+                  href="https://github.com/Bharath-S-J"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  <Github size={24} />
+                </a>
+                <a
+                  href="https://www.leetcode.com/u/bharathsj/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  <Code size={24} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/bharathsj/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  <Linkedin size={24} />
+                </a>
+                <a
+                  href="mailto:bharath@bharathsj.com"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  <Mail size={24} />
+                </a>
+              </div>
+              <p className="text-gray-400">
+                Made with ❤️ by Bharath S J &copy; 2025. All rights reserved.
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </footer>
 
-      <section id="contact" className="py-16 px-4 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Get in Touch
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Have an idea, a project, or just want to connect? Feel free to
-              reach out. always open to discussions and collaborations!
-            </p>
-          </div>
-          <ContactForm />
-        </div>
-      </section>
-
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col items-center space-y-6">
-            <div className="flex space-x-6 items-center justify-center pt-3">
-              <a
-                href="https://github.com/Bharath-S-J"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-400 transition-colors"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                href="https://www.leetcode.com/u/bharathsj/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-400 transition-colors"
-              >
-                <Code size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/bharathsj/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-400 transition-colors"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a
-                href="mailto:bharath@bharathsj.com"
-                className="hover:text-blue-400 transition-colors"
-              >
-                <Mail size={24} />
-              </a>
-            </div>
-            <p className="text-gray-400">
-              Made with ❤️ by Bharath S J &copy; 2025. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
-
-      {selectedProject && (
-        <ProjectModal
-          project={selectedProject}
-          onClose={() => setSelectedProject(null)}
-        />
-      )}
-    </div>
-
+        {selectedProject && (
+          <ProjectModal
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
+        )}
+      </div>
     </>
-    
   );
 }
 

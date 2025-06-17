@@ -237,8 +237,9 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             <img
               src={project.imageUrl}
               alt={project.title}
-              className="w-full h-40 sm:h-48 md:h-64 object-cover rounded-lg mb-4 sm:mb-6"
+              className="w-full h-40 sm:h-48 md:h-64 object-fill rounded-lg mb-4 sm:mb-6"
             />
+
             {project.gallery && project.gallery.length > 0 && (
               <button
                 onClick={() => setShowGallery(true)}
