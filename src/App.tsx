@@ -75,7 +75,7 @@ const projects = [
       "OpenAI (via OpenRouter)",
     ],
     imageUrl:
-      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Intent_Chat_Thumbnail.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Chating_DashBoard_With_Image.png",
     githubUrl: "https://github.com/Bharath-S-J/Intent-Chat",
     features: [
       "🔐 Authentication - JWT-based login, signup, and session management",
