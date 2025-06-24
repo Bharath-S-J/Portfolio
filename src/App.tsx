@@ -21,48 +21,48 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-  id: 1,
-  title: "cfapi – Code-Free API Generator (CLI + OpenAPI)",
-  description:
-    "cfapi is a powerful CLI tool that auto-generates full-featured REST APIs from just a simple schema file. It supports both mock data (JSON) and MongoDB (Mongoose), handles validation, routing, controller logic, OpenAPI specs, and scaffolds ready-to-run servers — all without writing boilerplate.",
-  technologies: [
-    "Node.js",
-    "Express",
-    "RestAPI",
-    "Automation",
-    "Mongoose",
-    "JSON Schema",
-    "OpenAPI 3.0",
-    "Regex Validation",
-    "dotenv",
-    "ES Modules",
-  ],
-  imageUrl:
-    "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/CfapiImages/CfapiThumbnail.png", // Update with final thumbnail
-  githubUrl: "https://github.com/Bharath-S-J/cfapi",
-  features: [
-    "⚙️ CLI-Based Generation - Define schema and instantly scaffold a full backend",
-    "🧪 Input Validation - Built-in validators for strings, numbers, enums, regex, etc.",
-    "📦 Dual Engines - Support for both MongoDB (via Mongoose) and mock JSON data",
-    "🔄 Full REST Support - Generates routes, controllers, middlewares, and models",
-    "📃 OpenAPI Generation - Automatically creates OpenAPI 3.0 specs and model docs",
-    "🚀 Zero Config Start - Built-in `.env`, server, and default data for fast local runs",
-    "🛠️ Extendable - Fully modular generators for custom engine or format support",
-    "📁 Real Examples - Includes working examples for 2 schemas with both engines",
-    "📦 Published on npm - Available via `@bharathsj/cfapi` for easy installation and use",
-  ],
-  challenges:
-    "Building a robust schema parser that supports deep nesting, validation constraints (like regex, enum, required), references, and arrays across both MongoDB and mock engines was key. Also ensured OpenAPI accuracy with schema-driven specs, and implemented CLI-level flexibility using Commander.js and custom config support.",
-  gallery: [
-    "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/CfapiImages/mock.png",
-    "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/CfapiImages/mongo.png",
-  ],
-},
+    id: 1,
+    title: "cfapi – Code-Free API Generator (CLI + OpenAPI)",
+    description:
+      "cfapi is a powerful CLI tool that auto-generates full-featured REST APIs from just a simple schema file. It supports both mock data (JSON) and MongoDB (Mongoose), handles validation, routing, controller logic, OpenAPI specs, and scaffolds ready-to-run servers — all without writing boilerplate.",
+    technologies: [
+      "Node.js",
+      "Express",
+      "RestAPI",
+      "Automation",
+      "Mongoose",
+      "JSON Schema",
+      "OpenAPI 3.0",
+      "Regex Validation",
+      "dotenv",
+      "ES Modules",
+    ],
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/CfapiImages/CfapiThumbnail.png", // Update with final thumbnail
+    githubUrl: "https://github.com/Bharath-S-J/cfapi",
+    features: [
+      "⚙️ CLI-Based Generation - Define schema and instantly scaffold a full backend",
+      "🧪 Input Validation - Built-in validators for strings, numbers, enums, regex, etc.",
+      "📦 Dual Engines - Support for both MongoDB (via Mongoose) and mock JSON data",
+      "🔄 Full REST Support - Generates routes, controllers, middlewares, and models",
+      "📃 OpenAPI Generation - Automatically creates OpenAPI 3.0 specs and model docs",
+      "🚀 Zero Config Start - Built-in `.env`, server, and default data for fast local runs",
+      "🛠️ Extendable - Fully modular generators for custom engine or format support",
+      "📁 Real Examples - Includes working examples for 2 schemas with both engines",
+      "📦 Published on npm - Available via `@bharathsj/cfapi` for easy installation and use",
+    ],
+    challenges:
+      "Building a robust schema parser that supports deep nesting, validation constraints (like regex, enum, required), references, and arrays across both MongoDB and mock engines was key. Also ensured OpenAPI accuracy with schema-driven specs, and implemented CLI-level flexibility using Commander.js and custom config support.",
+    gallery: [
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/CfapiImages/mock.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/CfapiImages/mongo.png",
+    ],
+  },
   {
     id: 2,
-    title: "Intent Chat - Real-Time Messaging App",
+    title: "Intent Chat - AI-Enhanced Real-Time Messaging App",
     description:
-      "A full-stack real-time chat application with secure authentication, contact-based messaging restrictions, theme customization, and live communication powered by Socket.IO. The system includes smart invite-based onboarding, optimized data flow, and modular architecture for scalability and performance.",
+      "A full-stack real-time chat application with secure authentication, AI-powered messaging features, contact-based messaging restrictions, theme customization, and live communication powered by Socket.IO. The system includes smart invite-based onboarding, optimized data flow, AI-driven interactions, and modular architecture for scalability and performance.",
     technologies: [
       "React (Vite)",
       "Node.js",
@@ -72,13 +72,14 @@ const projects = [
       "Socket.IO",
       "Cloudinary",
       "Tailwind CSS",
+      "OpenAI (via OpenRouter)",
     ],
     imageUrl:
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Intent_Chat_Thumbnail.png",
     githubUrl: "https://github.com/Bharath-S-J/Intent-Chat",
-
     features: [
       "🔐 Authentication - JWT-based login, signup, and session management",
+      "🧠 AI Features - Emotion detection (😄/😢/😠/...) and smart reply suggestions",
       "📧 Email Invites - Invite friends via email; invited users become direct contacts",
       "👥 Contact Management - Add/remove contacts, real-time online status tracking",
       "💬 Messaging System - Real-time messaging with support for images (Cloudinary upload)",
@@ -88,11 +89,12 @@ const projects = [
       "🛰️ Sockets - Live communication and presence tracking with efficient connection handling",
     ],
     challenges:
-      "Designing the contact invitation flow required custom email integration with Nodemailer, dynamic route generation, and secure invite token handling. Ensuring clean socket lifecycle management across login/logout while maintaining real-time presence and message flow was also carefully addressed.",
+      "Designing the contact invitation flow required custom email integration with Nodemailer, dynamic route generation, and secure invite token handling. Implementing AI features while maintaining real-time performance involved careful API rate limit management and local caching strategies. Ensuring clean socket lifecycle management across login/logout while maintaining real-time presence and message flow was also carefully addressed.",
     gallery: [
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Create_Account.png",
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/SigIn.png",
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Chating_DashBoard.png",
+      "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Chating_DashBoard_With_Image.png",
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Contacts_Management.png",
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Profile.png",
       "https://cdn.jsdelivr.net/gh/Bharath-S-J/CDNImages@main/IntentChatImages/Settings.png",
