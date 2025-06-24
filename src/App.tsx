@@ -169,7 +169,7 @@ const projects = [
       "🔐 Authentication - Email/Password, Google OAuth, Email verification (via Firebase)",
       "✅ Task Management - Create, update, delete, and mark tasks as completed",
       "🔄 Real-time Sync - Firestore ensures live updates across devices",
-      "📬 Email Reminders - Requires backend (currently not active in live demo)",
+      "📬 Email Reminders - 🚫 Not functional in demo (backend required)",
       "🔔 Web Notifications - In-browser notifications for active users when reminders are triggered",
       "🔑 Protected Routes - Ensures secure access only for authenticated users",
       "🚀 Performance - Built with Vite and optimized for speed",
